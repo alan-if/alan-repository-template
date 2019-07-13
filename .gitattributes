@@ -1,0 +1,138 @@
+
+# Set Git's default behaviour to text-files autodetection, in case users don't
+# have `core.autocrlf` set:
+* text=auto
+
+# ==============================================================================
+#                      File Extensions Setting: Text/Binary
+# ==============================================================================
+# Explicitly declare commonly used file extensions as either text or binary, and
+# tell Git how to handle line-endings normalization.
+
+## ==========
+## Alan Files
+## ==========
+*.alan     text
+*.i        text
+*.ifid     text
+*.a3c      binary
+*.a3r      binary
+*.sav      binary
+
+## ===================
+## Game Scripts & Logs
+## ===================
+*.log      text
+*.a3log    text
+*.a3sol    text
+
+## =============
+## AlanIDE Files
+## =============
+.project   text
+
+## =============
+## Shell Scripts
+## =============
+*.bat      text eol=crlf
+*.sh       text eol=lf
+*.ps1      text eol=crlf
+*.sed      text eol=lf
+
+## ===================
+## Documentation Files
+## ===================
+*.adoc       text
+*.asciidoc   text
+*.md         text
+*.txt        text
+*.doc        binary
+*.docx       binary
+*.odt        binary
+*.pdf        binary
+COPYING      text
+LICENSE      text
+UNLICENSE    text
+
+## ===================
+## Configuration Files
+## ===================
+*.cnf          text
+*.conf         text
+*.config       text
+*.ini          text
+*.prefs        text
+.editorconfig  text
+.gitattributes text
+.gitconfig     text
+.gitignore     text
+.gitkeep       text
+.gitmodules    text eol=lf
+
+## ===============
+## Zipped Archives
+## ===============
+*.7z       binary
+*.gz       binary
+*.jar      binary
+*.rar      binary
+*.tar      binary
+*.zip      binary
+
+## ==============
+## Graphics Files
+## ==============
+*.gif      binary
+*.ico      binary
+*.jpeg     binary
+*.jpg      binary
+*.png      binary
+*.svg      binary
+*.svgz     binary
+
+## ==================
+## Binary Executables
+## ==================
+*.app      binary
+*.dll      binary
+*.dylib    binary
+*.exe      binary
+*.out      binary
+*.so       binary
+
+# ==============================================================================
+#                                GitHub Linguist
+# ==============================================================================
+#  -- https://github.com/github/linguist
+#
+# Manually define/override some extension so that GitHub's Linguist library can
+# 1) Correctly gather statistics on source files, and
+# 2) Use proper syntax highlighting on GitHub's WebUI.
+
+# NOTE: Alan syntax is not supported by Linguist:
+#      https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+
+## ==================
+## Alan Related Files
+## ==================
+*.alan    linguist-language=Alan
+*.alan    linguist-detectable=true
+*.i       linguist-language=Alan
+*.i       linguist-detectable=true
+*.ifid    linguist-generated=true
+
+# Set solutions and transcripts as Text (prose) and exclude them from repo stats,
+# but preserve diffing them by avoiding use of 'linguist-generated', although
+# transcripts are generated files technically speaking.
+*.a3sol   linguist-language=Text
+*.a3sol   linguist-detectable=false
+*.a3log   linguist-language=Text
+*.a3log   linguist-detectable=false
+
+## =============
+## AlanIDE Files
+## =============
+.project   linguist-language=XML
+.project   linguist-generated=true
+
+# EOF #
