@@ -86,7 +86,8 @@ The __[ALAN Repository Template]__ is released into the public domain via the [C
 
 - [www.AlanIF.se][Alan] — the Alan website.
 - [Alan Yahoo Group] — for community help, announcements and discussions.
-- [Alan sources][Alan Bitbucket] — source code repository on Bitbucket.
+- [Alan sources on Bitbucket][Alan Bitbucket] — source code repository on Bitbucket.
+- [Alan sources on GitHub][Alan GitHub] — source code repository on GitHub.
 - [Alan IF Development team] — GitHub profile and public projects.
 
 ## Documentation and Tutorials
@@ -134,6 +135,7 @@ The __[ALAN Repository Template]__ is released into the public domain via the [C
 [Alan IF]: https://www.alanif.se/ "Visit the Alan website"
 [Alan Yahoo Group]: https://groups.yahoo.com/neo/groups/alan-if/info "Visit the Alan-IF group on Yahoo"
 [Alan Bitbucket]: https://bitbucket.org/alanif/alan/ "Visit the Alan source repository on Bitbucket"
+[Alan GitHub]: https://github.com/alan-if/alan/ "Visit the Alan source repository on GitHub"
 [Alan SDK]: https://www.alanif.se/download-alan-v3/development-kits "Go to the Alan SDK section of the Alan website"
 
 [Artistic License 2.0]: https://opensource.org/licenses/Artistic-2.0
