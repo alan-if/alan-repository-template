@@ -18,6 +18,9 @@ Created by [Tristano Ajmone] on July 13, 2019. Released into the Public Domain.
 
 - [About this Template](#about-this-template)
     - [What Do I Get?](#what-do-i-get)
+        - [Git Configurations](#git-configurations)
+        - [EditorConfig Settings](#editorconfig-settings)
+        - [README Template](#readme-template)
     - [License](#license)
 - [Useful Alan Links](#useful-alan-links)
     - [Documentation and Tutorials](#documentation-and-tutorials)
@@ -51,11 +54,69 @@ To learn more about the internal details of this template, consult the [reposito
 
 ## What Do I Get?
 
-The template is just a boilerplate containing some Git configurations designed to optimize Alan workflows. Spcifically, you'll get `.gitgnore` and `.gitattributes` files with carefully designed patterns that will cover a variety of Alan usage scenarios in cross-platform environments.
+The template is just a boilerplate containing useful configurations designed to optimize Alan workflow in cross-platform collaborative projects.
 
-You also get this markdown README file that you're reading right now, which contains the _[Useful Alan Links]_ section providing links to various Alan related assets, which you might reuse in your project. It's a well structured markdown document, with many reference links to Alan assets (at the end of the source document) which might come handy — and could spare you a good amount of typing, if you're going to link to other Alan projects.
+Specifically, the repository template provides:
 
-If you don't need the README file you can just trash it, but chances are that you'll be adding a `README.md` file to your project anyway, so you might as well just overwrite it, or keep just those reference links that you need. After some initial thoughts, I finally decided that it was better to include this README file in the template, for the benefit of those wishing to offer links to the Alan community and assets, rather than leave it out. For those who'll need it, it's going to be a true time-saver, while those who don't need it shouldn't be bothered much by having to delete/overwrite it.
+- [Git configurations](#git-configurations)
+- [Editor configurations](#editorconfig-settings)
+- [A README document template](#readme-template)
+
+The configuration files for Git and EditorConfig cover the following Alan-specific files extensions:
+
+|   ext    |                description                 |
+|----------|--------------------------------------------|
+| `.alan`  | Alan source files.                         |
+| `.i`     | Alan source modules.                       |
+| `.a3sol` | Alan commands script (aka solution files). |
+| `.a3log` | Alan game transcripts.                     |
+
+By default, the following Alan generated files will be excluded from the project:
+
+|   ext   |           description           |
+|---------|---------------------------------|
+| `.a3c`  | Alan compiled adventures.       |
+| `.ifid` | Source adventure IFID file.     |
+| `.log`  | Compiler/ARun log files.        |
+| `.sav`  | Saved games (used for testing). |
+
+
+### Git Configurations
+
+- [`.gitattributes`](./.gitattributes)
+- [`.gitignore`](./.gitignore)
+
+The template contains pre-set `.gitignore` and `.gitattributes` files with carefully designed patterns that will cover a variety of Alan usage scenarios in cross-platform environments.
+
+The `.gitattributes` file defines EOL normalization settings for a variety of Alan related files, as well as covering common file extensions used in IF projects. It also provides additional settings for [GitHub Linguist], to improve repository statistics and Alan source files visualization on GitHub.
+
+The `.gitignore` file defines _ad hoc_ file exclusion patterns for Alan projects, as well as covering common exclusion patterns for Windows, Linux and macOS.
+
+[GitHub Linguist]: https://github.com/github/linguist "Visit the GitHub Linguist project on GitHub"
+
+### EditorConfig Settings
+
+- [`.editorconfig`](./.editorconfig)
+
+The template contains [EditorConfig] settings for Alan files designed to offer support across multiple editors and IDEs, as well as to provide optimal source code previews on GitHub.
+
+The [EditorConfig] file format is an application-agnostic standard for defining consistent coding style conventions for multiple developers working on the same project across various editors and IDEs. A growing number of editors and IDEs support EditorConfig out of the box, and numerous plug-ins and extensions are available for editors that don't.
+
+One of the main benefits of the EditorConfig settings is the ability to enforce ISO-8859-1 encoding on Alan files (`*.alan`, `*.i`, `*.a3sol`, `*.a3log`) and prevent accidental UTF-8 file-corruption from copy-&-paste operations. Most editors that support [EditorConfig] should be able to enforce ISO-8859-1 strictness on Alan sources via the `.editorconfig` file.
+
+As of Jun 2015, [GitHub natively supports EditorConfig] files within repositories. The `.editorconfig` file in this template will improve Alan sources visualization on GitHub. Although GitHub doesn't recognize Alan source files natively, it will honour the EditorConfig settings of this template.
+
+[EditorConfig]: https://editorconfig.org/ "Visit the EditorConfig project website"
+[Github natively supports EditorConfig]: https://github.com/editorconfig/editorconfig.github.com/pull/48
+
+
+### README Template
+
+- [`README.md`](./README.md)
+
+You also get this markdown README document that you're reading right now, which contains the _[Useful Alan Links]_ section providing links to various Alan related assets, which you might reuse in your project. It's a well structured and polished markdown document, with many reference links to Alan assets (at the end of the source document) which might come handy — and could spare you a good amount of typing, if you're going to link to other Alan projects.
+
+If you don't need the README file you can just trash it, but chances are that you'll be adding a `README.md` file to your project anyway, so you might as well just overwrite it, or keep the reference links that you need. After some initial thoughts, I finally decided that it was better to include this README file in the template, for the benefit of those wishing to offer links to the Alan community and assets, rather than leave it out. For those who'll need it, it's going to be a true time-saver, while those who don't need it shouldn't be bothered much by having to delete/overwrite it.
 
 [Useful Alan Links]: #useful-alan-links "Jump to links section"
 
@@ -68,13 +129,13 @@ The __[ALAN Repository Template]__ is released into the public domain via the [C
 [CC0 1.0 Universal]: https://creativecommons.org/publicdomain/zero/1.0/ "Learn more about Creative Commons 0"
 
 > ## No Copyright
-> 
+>
 > The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.
-> 
+>
 > You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. See __Other Information__ below.
-> 
+>
 > ### Other Information
-> 
+>
 > * In no way are the patent or trademark rights of any person affected by CC0, nor are the rights that other persons may have in the work or in how the work is used, such as [publicity or privacy rights].
 > * Unless expressly stated otherwise, the person who associated a work with this deed makes no warranties about the work, and disclaims liability for all uses of the work, to the fullest extent permitted by applicable law.
 > * When using or citing the work, you should not imply [endorsement] by the author or the affirmer.
