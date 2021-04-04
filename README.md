@@ -43,13 +43,13 @@ Your new repository created using this template will be optimally configured for
 
 For more detailed information on using repository templates, see:
 
-- [GitHub Help » Creating a repository from a template]
+- [GitHub Docs » Creating a repository from a template]
 
 To learn more about the internal details of this template, consult the [repository Wiki].
 
 [by clicking on this link]: https://github.com/alan-if/alan-repository-template/generate "Create a new repository using the ALAN Repository Template!"
 [generate new repositories with repository templates]: https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/ "Read full article on GitHub Blog"
-[GitHub Help » Creating a repository from a template]: https://help.github.com/en/articles/creating-a-repository-from-a-template
+[GitHub Docs » Creating a repository from a template]: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
 [repository Wiki]: https://github.com/alan-if/alan-repository-template/wiki "Go to the Wiki of the ALAN Repository Template project"
 
 ## What Do I Get?
@@ -146,8 +146,7 @@ The __[ALAN Repository Template]__ is released into the public domain via the [C
 # Useful Alan Links
 
 - [www.AlanIF.se][Alan] — the Alan website.
-- [Alan Yahoo Group] — for community help, announcements and discussions.
-- [Alan sources on Bitbucket][Alan Bitbucket] — source code repository on Bitbucket.
+- [Alan IF Google Group] — for community help, announcements and discussions.
 - [Alan sources on GitHub][Alan GitHub] — source code repository on GitHub.
 - [Alan IF Development team] — GitHub profile and public projects.
 
@@ -194,8 +193,7 @@ The __[ALAN Repository Template]__ is released into the public domain via the [C
 
 [Alan]: https://www.alanif.se/ "Visit the Alan website"
 [Alan IF]: https://www.alanif.se/ "Visit the Alan website"
-[Alan Yahoo Group]: https://groups.yahoo.com/neo/groups/alan-if/info "Visit the Alan-IF group on Yahoo"
-[Alan Bitbucket]: https://bitbucket.org/alanif/alan/ "Visit the Alan source repository on Bitbucket"
+[Alan IF Google Group]: https://groups.google.com/g/alan-if/ "Visit the Alan IF discussions group on Google Groups"
 [Alan GitHub]: https://github.com/alan-if/alan/ "Visit the Alan source repository on GitHub"
 [Alan SDK]: https://www.alanif.se/download-alan-v3/development-kits "Go to the Alan SDK section of the Alan website"
 
