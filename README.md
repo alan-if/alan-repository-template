@@ -176,7 +176,7 @@ The __[ALAN Repository Template]__ is released into the public domain via the [C
     + [AlanIDE info page].
     + _[Alan IDE Reference Guide]_ — by Robert DeFord (2018), PDF document.
     + [AlanIDE sources] — JAVA source files, on GitHub.
-- [Sublime Alan] — [Sublime Text 3] package for Alan 3 (working Alpha).
+- [Sublime Alan IF] — [Sublime Text 4] package for Alan 3 (working Alpha).
 
 ## Miscellanea
 
@@ -219,7 +219,7 @@ The __[ALAN Repository Template]__ is released into the public domain via the [C
 [Alan Library v0.6.2]: https://github.com/alan-if/alan-goodies/tree/master/libs "View Alan Lib v0.6.2 at the 'Alan Goodies' project"
 [Alan Repository Template]: https://github.com/alan-if/alan-repository-template "Visit the Alan Repository Template on GitHub"
 [Alan StdLibLab]: https://github.com/tajmone/Alan-StdLibLab "Visit the Alan StdLibLab project on GitHub"
-[Sublime Alan]: https://github.com/tajmone/sublime-alan "Visit the Sublime Alan project on GitHub"
+[Sublime Alan IF]: https://github.com/tajmone/sublime-alan-if "Visit the Sublime Alan IF project on GitHub"
 
 <!-- Alan docs & tutorials -->
 
@@ -234,7 +234,7 @@ The __[ALAN Repository Template]__ is released into the public domain via the [C
 
 <!-- 3rd party tools & services -->
 
-[Sublime Text 3]: https://www.sublimetext.com/ "Visit Sublime Text website"
+[Sublime Text 4]: https://www.sublimetext.com "Visit Sublime Text website"
 [Travis CI]: https://travis-ci.com/ "Visit Travis CI website"
 
 <!-- people and organizations -->
