@@ -20,6 +20,8 @@ Created by [Tristano Ajmone] on July 13, 2019. Released into the Public Domain.
     - [What Do I Get?](#what-do-i-get)
         - [Git Configurations](#git-configurations)
         - [EditorConfig Settings](#editorconfig-settings)
+            - [How to Enable ISO Encoding for Alan Files](#how-to-enable-iso-encoding-for-alan-files)
+            - [How to Enable UTF-8 Encoding for Alan Files](#how-to-enable-utf-8-encoding-for-alan-files)
         - [README Template](#readme-template)
     - [License](#license)
 - [Useful Alan Links](#useful-alan-links)
@@ -64,21 +66,22 @@ Specifically, the repository template provides:
 
 The configuration files for Git and EditorConfig cover the following Alan-specific files extensions:
 
-|   ext    |                description                 |
-|----------|--------------------------------------------|
-| `.alan`  | Alan source files.                         |
-| `.i`     | Alan source modules.                       |
-| `.a3sol` | Alan commands script (aka solution files). |
-| `.a3log` | Alan game transcripts.                     |
+|   ext   |                description                 |
+|---------|--------------------------------------------|
+| `.alan` | Alan source files.                         |
+| `.i`    | Alan source modules.                       |
+| `.a3s`  | Alan commands script (aka solution files). |
+| `.a3t`  | Alan game transcripts.                     |
+| `.ifid` | Source adventure IFID file.                |
 
 By default, the following Alan generated files will be excluded from the project:
 
-|   ext   |           description           |
-|---------|---------------------------------|
-| `.a3c`  | Alan compiled adventures.       |
-| `.ifid` | Source adventure IFID file.     |
-| `.log`  | Compiler/ARun log files.        |
-| `.sav`  | Saved games (used for testing). |
+|  ext   |               description                |
+|--------|------------------------------------------|
+| `.a3c` | Alan compiled adventures.                |
+| `.a3r` | Alan compiled adventures' resource file. |
+| `.log` | Compiler/ARun log files.                 |
+| `.sav` | Saved games (used for testing).          |
 
 
 ### Git Configurations
@@ -98,16 +101,49 @@ The `.gitignore` file defines _ad hoc_ file exclusion patterns for Alan projects
 
 - [`.editorconfig`](./.editorconfig)
 
-The template contains [EditorConfig] settings for Alan files designed to offer support across multiple editors and IDEs, as well as to provide optimal source code previews on GitHub.
+The template contains [EditorConfig] settings for Alan files plus some generic Git repository settings, designed to offer support across multiple editors and IDEs, as well as to provide optimal source code previews on GitHub.
 
 The [EditorConfig] file format is an application-agnostic standard for defining consistent coding style conventions for multiple developers working on the same project across various editors and IDEs. A growing number of editors and IDEs support EditorConfig out of the box, and numerous plug-ins and extensions are available for editors that don't.
 
-One of the main benefits of the EditorConfig settings is the ability to enforce ISO-8859-1 encoding on Alan files (`*.alan`, `*.i`, `*.a3sol`, `*.a3log`) and prevent accidental UTF-8 file-corruption from copy-&-paste operations. Most editors that support [EditorConfig] should be able to enforce ISO-8859-1 strictness on Alan sources via the `.editorconfig` file.
+One of the main benefits of the EditorConfig settings is the ability to enforce ISO-8859-1 encoding on Alan files (`*.alan`, `*.i`, `*.a3s`, `*.a3t`) and prevent accidental UTF-8 file-corruption from copy-&-paste operations. Most editors that support [EditorConfig] should be able to enforce ISO-8859-1 strictness on Alan sources via the `.editorconfig` file.
+
+> **IMPORTANT!** Since Alan Beta8 introduces support for UTF-8 encoded Alan files, the template _doesn't set any encoding_ for Alan files. You should manually edit the `.editorconfig` file according to your needs (instructions below).
 
 As of Jun 2015, [GitHub natively supports EditorConfig] files within repositories. The `.editorconfig` file in this template will improve Alan sources visualization on GitHub. Although GitHub doesn't recognize Alan source files natively, it will honour the EditorConfig settings of this template.
 
-[EditorConfig]: https://editorconfig.org/ "Visit the EditorConfig project website"
 [Github natively supports EditorConfig]: https://github.com/editorconfig/editorconfig.github.com/pull/48
+
+#### How to Enable ISO Encoding for Alan Files
+
+To enforce ISO-8859-1 encoding (i.e. Latin1) on Alan files, edit the `.editorconfig` file and change the `charset` key for ALAN IF to `latin1`:
+
+```editorconfig
+## ALAN IF
+##########
+
+# Common settings for all Alan files
+[*.{alan,i,a3s,a3t}]
+indent_style = space
+indent_size = unset
+charset = latin1
+```
+
+> **WARNING!** If you use [EClint] to validate project sources, don't use `charset = latin1`, because EClint is buggy and will report false-positive errors for validly encoded ISO-8859-1 files! (See [edmao/eclint#169](https://github.com/jedmao/eclint/issues/169)) Just keep `charset = unset`.
+
+#### How to Enable UTF-8 Encoding for Alan Files
+
+Alan Beta8 introduces support for UTF-8 encoded Alan files. If you're working with UTF-8 encoded Alan files, you should edit the `.editorconfig` file and change the `charset` key for ALAN IF to either `utf-8-bom` or `utf-8`, depending on whether you're adding a BOM to the files or not (it's advisable to do so):
+
+```editorconfig
+## ALAN IF
+##########
+
+# Common settings for all Alan files
+[*.{alan,i,a3s,a3t}]
+indent_style = space
+indent_size = unset
+charset = utf-8-bom
+```
 
 
 ### README Template
@@ -234,6 +270,8 @@ The __[ALAN Repository Template]__ is released into the public domain via the [C
 
 <!-- 3rd party tools & services -->
 
+[Eclint]: https://www.npmjs.com/package/eclint "EClint page at NPM"
+[EditorConfig]: https://editorconfig.org "Visit the EditorConfig project website"
 [Sublime Text 4]: https://www.sublimetext.com "Visit Sublime Text website"
 [Travis CI]: https://travis-ci.com/ "Visit Travis CI website"
 
